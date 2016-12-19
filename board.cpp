@@ -1,12 +1,21 @@
 #include "board.h"
 
 Board::Board() {
+    data[NUM_ROWS][NUM_COLS];
+    for (int i = 0; i < NUM_ROWS; i++) {
+        for (int j = 0; j < NUM_COLS; j++) {
+            data[i][j] = Empty;
+        }
+    }
+    
+    nextPlayer_to_move = Player1;
 }
 
 Board::Board(const string &fen) {
 }
 
 void Board::printBoard_as_FENstring(ostream &os) const {
+
 }
 
 PieceType Board::atLocation(int row, int col) {
